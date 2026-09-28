@@ -8,7 +8,7 @@
             "program": "${command:cmake.launchTargetPath}",
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "visualizerFile": "${command:qt-cpp.natvis}",
+            "visualizerFile": "/home/bqhwng/.config/Code/User/workspaceStorage/b7f879291a3df71e6804922d10038c78/tonka3000.qtvsctools/qt.natvis.xml",
             "showDisplayString": true,
             "linux": {
                 "MIMode": "gdb",

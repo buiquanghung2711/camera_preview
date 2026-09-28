@@ -7,13 +7,20 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
+set(CMAKE_AUTOUIC_SEARCH_PATHS "${CMAKE_CURRENT_SOURCE_DIR}/ui")
+
 qt_standard_project_setup()
 
 qt_add_executable(camera_preview
-    main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
+    src/main.cpp
+    src/mainwindow.cpp
+    include/mainwindow.h
+    ui/mainwindow.ui
+)
+
+target_include_directories(camera_preview PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_BINARY_DIR}
 )
 
 target_link_libraries(camera_preview PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
